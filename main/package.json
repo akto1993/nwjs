@@ -17,8 +17,8 @@
     "toolbar": false,
     "width": 500,
     "height": 700,
-    "min_width":500,
-    "position":"center",
-    "icon":"Akira_Kogami.png"
+    "min_width": 500,
+    "position": "center",
+    "icon": "Akira_Kogami.png"
   }
 }
