@@ -1,0 +1,24 @@
+{
+  "name": "pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.1",
+    "mongoose": "^4.3.3",
+    "nw": "^0.12.3"
+  },
+  "window": {
+    "toolbar": false,
+    "width": 500,
+    "height": 700,
+    "min_width":500,
+    "position":"center",
+    "icon":"Akira_Kogami.png"
+  }
+}

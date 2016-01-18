@@ -1,0 +1,20 @@
+body{
+  background-color: #2f2f2f;
+  color:white;
+}
+.table, tr, td{
+  border: 1px solid white;
+  padding: 10px;
+}
+input{
+  border: 1px solid white;
+  padding: 10px;
+}
+h2{
+  text-align: center;
+}
+
+ul>li {
+  padding: 5px;
+  direction: none;
+}

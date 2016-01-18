@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="./css/theme.css" type="text/css" rel="stylesheet">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="db.js"></script>
+</head>
+<body>
+  <h2>Leki</h2>
+
+  <div class="edit" style="display:none">
+    <input     type="text"      id="edit_id" style="display: none">
+    <ul>
+      <li><input type="text"    id="edit_name">Name</li>
+      <li><input type="text"    id="edit_type">Type</li>
+      <li><input type="number"  id="edit_cost">Cost</li>
+      <li><input type="submit"  value="Zatwierdz" onclick="lek_edytujdb()"></li>
+    </ul>
+  </div>
+  <div class="leki"></div>
+  <br />
+  <br />
+  <h3>Dodaj</h3>
+  <input type="text"   id="lek_name">   Name <br /><br />
+  <input type="text"   id="lek_type">   Type <br /><br />
+  <input type="number" id="lek_cost">   Cost <br /><br />
+  <input type="submit" id="lek_add"     value="Add Lek" onclick="lek_add()"><br /><br />
+</body>
+</html>
