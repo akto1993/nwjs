@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/warzywa', function(err) {
 var warzywa = mongoose.model('warzywas', new mongoose.Schema({
     _id : String,
     name: String,
-    type: String,
+    country: String,
     cost: String,
 }));
 
@@ -17,7 +17,7 @@ var warzywo_add = function() {
   new warzywa({
     _id:          mongoose.Types.ObjectId(),
     name:         $("#warzywo_name").val(),
-    type:         $("#warzywo_type").val(),
+    country:         $("#warzywo_country").val(),
     cost:         $("#warzywo_cost").val(),
   }).save(function(err) {
     if(err) {
@@ -37,10 +37,10 @@ var wypisz = function(){
     } else {
       $('.sekcja').remove();
       var content = "";
-      $(".warzywa").append("<table class='sekcja'><tr><td>Nazwa</td><td>Typ</td><td>Cena</td><td>Usun</td><td>Edytuj</td></tr></table>");
+      $(".warzywa").append("<table class='sekcja'><tr><td>Name</td><td>Country</td><td>Price</td><td>Delete</td><td>Edit</td></tr></table>");
       for(var i = 0; i < result.length; i++) {
         content +=    "<tr><td>"+result[i].name+"</td>"+
-                      "<td>"+result[i].type+"</td>"+
+                      "<td>"+result[i].country+"</td>"+
                       "<td>"+result[i].cost+"</td>"+
                       "<td><input type='submit' value='Delete' onclick='warzywo_delete("+JSON.stringify(result[i]._id)+")'></td>"+
                       "<td><input type='submit' value='Edytuj' onclick='warzywo_edycja("+JSON.stringify(result[i]._id)+")'></td></tr>";
@@ -76,7 +76,7 @@ var warzywo_edycja = function(id) {
       console.log(err); next();
     } else {
       $("#edit_name").val(result.name);
-      $("#edit_type").val(result.type);
+      $("#edit_country").val(result.country);
       $("#edit_cost").val(result.cost);
       $("#edit_id").val(result._id);
     }
@@ -92,7 +92,7 @@ var warzywo_edytujdb = function(id) {
     }
   }).update({
     name: $("#edit_name").val(),
-    type: $("#edit_type").val(),
+    country: $("#edit_country").val(),
     cost: $("#edit_cost").val(),
   }).exec();
  $(".edit").hide();

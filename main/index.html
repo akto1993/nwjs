@@ -7,14 +7,20 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="db.js"></script>
 </head>
-<body>
-  <h2>warzywa</h2>
+<body background="cebula.png">
+  <h3>Add</h3>
+  <input type="text"   id="warzywo_name">   Name <br /><br />
+  <input type="text"   id="warzywo_country">   Country <br /><br />
+  <input type="number" id="warzywo_cost">   Cost <br /><br />
+  <input type="submit" id="warzywo_add"     value="Add warzywo" onclick="warzywo_add()"><br /><br />
+</body>
+  <h2>wegetables table</h2>
 
   <div class="edit" style="display:none">
     <input     type="text"      id="edit_id" style="display: none">
     <ul>
       <li><input type="text"    id="edit_name">Name</li>
-      <li><input type="text"    id="edit_type">Type</li>
+      <li><input type="text"    id="edit_country">Country</li>
       <li><input type="number"  id="edit_cost">Cost</li>
       <li><input type="submit"  value="Zatwierdz" onclick="warzywo_edytujdb()"></li>
     </ul>
@@ -22,10 +28,5 @@
   <div class="warzywa"></div>
   <br />
   <br />
-  <h3>Dodaj</h3>
-  <input type="text"   id="warzywo_name">   Name <br /><br />
-  <input type="text"   id="warzywo_type">   Type <br /><br />
-  <input type="number" id="warzywo_cost">   Cost <br /><br />
-  <input type="submit" id="warzywo_add"     value="Add warzywo" onclick="warzywo_add()"><br /><br />
-</body>
+
 </html>
